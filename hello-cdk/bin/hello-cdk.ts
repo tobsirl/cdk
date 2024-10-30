@@ -1,14 +1,11 @@
 #!/usr/bin/env node
-import 'source-map-support/register';
-import * as cdk from 'aws-cdk-lib';
-import { HelloCdkStack } from '../lib/hello-cdk-stack';
+import "source-map-support/register";
+import * as cdk from "aws-cdk-lib";
+import { HelloCdkStack } from "../lib/hello-cdk-stack";
 
 const app = new cdk.App();
-new HelloCdkStack(app, 'HelloCdkStack', {
-  env: {
-    region: 'eu-west-1',
-    account: 
-  }
+new HelloCdkStack(app, "HelloCdkStack", {
+  env: { region: "eu-west-1", account: "123456789012" },
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
